@@ -2,7 +2,8 @@
 # Total Baltimore PM2.5 Emissions from 1999-2008 by Type
 #
 # Sum *ALL* emissions by year for Baltimore by type
-# and then plot by year using ggplot2 plotting system
+# and then create a plot for each type, by year using 
+# the ggplot2 plotting system
 #--------------------------------------------------------
 
 library(ggplot2)
