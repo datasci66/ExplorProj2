@@ -3,7 +3,7 @@
 #
 # Sum *ALL* emissions by year for Baltimore by type
 # and then create a plot for each type, by year using 
-# the ggplot2 plotting system
+# ggplot2 plotting system
 #--------------------------------------------------------
 
 library(ggplot2)
