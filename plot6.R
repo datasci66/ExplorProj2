@@ -23,7 +23,7 @@ NEI_MV<-subset(NEI,
 NEI_MV$fips<-factor(NEI_MV$fips)
 
 ## sum across all sources of MV emissions by year
-NEI_agg=aggregate(list(Emissions=NEI_MV$Emissions),
+NEI_agg=aggregate(list(Emissions=log(NEI_MV$Emissions)),
                   list(Year=NEI_MV$year,County=NEI_MV$fips),
                   sum)
 # change fips code to county name
@@ -34,9 +34,10 @@ png(file="plot6.png",width=720,height=480)
 
 # include both counties in one plot, each with different color
 qplot(Year,Emissions,data=NEI_agg,
-      geom =	c("point","smooth"),method="lm",
+      geom= c("point","smooth"),
+      method="lm",
       main="PM2.5 Emissions by Motor Vehicles for Baltimore and Los Angeles",
-      ylab="PM2.5 Emissions",
+      ylab="Log(PM2.5 Emissions)",
       color=County)
 
 dev.off()
