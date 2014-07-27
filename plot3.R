@@ -18,7 +18,7 @@ NEI_agg=aggregate(list(Emissions=NEI_fips$Emissions),
                   list(Year=NEI_fips$year,Type=NEI_fips$type),
                   sum)
 
-png(file="plot3.png",width=960)
+png(file="plot3.png",width=1200,height=600)
 
 # generate one plot per type for year and emissions
 qplot(Year,Emissions,data=NEI_agg,facets=.~Type,
