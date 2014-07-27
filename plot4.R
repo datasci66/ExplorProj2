@@ -1,8 +1,8 @@
 #--------------------------------------------------------
-# Total Baltimore PM2.5 Emissions from 1999-2008 by Type
+# Coal-related Baltimore PM2.5 Emissions from 1999-2008
 #
-# Sum coal-related emissions by year for the US
-# and then plot by year using ggplot2 plotting system
+# Sum coal-related emissions by year for Baltimore
+# and then plot by year using the ggplot2 plotting system
 #--------------------------------------------------------
 
 library(ggplot2)
@@ -32,7 +32,7 @@ png(file="plot4.png",width=720)
 # plot emissions by year
 qplot(Year,Emissions,data=NEI_agg,
       geom =	c("point","smooth"),method="lm",
-      main="US Total PM2.5 Emissions by Coal Combustion",
+      main="Baltimore PM2.5 Emissions from Coal Combustion",
       ylab="PM2.5 Emissions from Coal")
 
 dev.off()
